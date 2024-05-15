@@ -17,6 +17,7 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
+import loja_virtual_TysBy.enums.StatusContaReceber;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -37,12 +38,12 @@ public abstract class Pessoa implements Serializable {
 	private String telefone;
 	
 	@OneToMany(mappedBy = "pessoa", orphanRemoval =  true, cascade = CascadeType.ALL, fetch = FetchType.LAZY )
-	private java.util.List<Endereco> enderecos = new ArrayList<Endereco>();
+	private java.util.List<ContaReceber> enderecos = new ArrayList<ContaReceber>();
 	
-	public void setEnderecos(java.util.List<Endereco> enderecos) {
+	public void setEnderecos(java.util.List<ContaReceber> enderecos) {
 		this.enderecos = enderecos;
 	}
-	public java.util.List<Endereco> getEnderecos() {
+	public java.util.List<ContaReceber> getEnderecos() {
 		return enderecos;
 	}
 
