@@ -3,7 +3,7 @@ package loja_virtual_TysBy.model;
 import java.util.Objects;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.GrantedAuthoritiesContainer;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

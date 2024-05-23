@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,6 +13,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
+@Entity
 @Table(name = "cup_desc")
 @SequenceGenerator(name = "cup_desc", sequenceName = "cup_desc", allocationSize = 1, initialValue = 1)
 
@@ -96,8 +98,5 @@ public class CupDesc implements Serializable {
 			return false;
 		return true;
 	}
-
-	
-	
 
 }
