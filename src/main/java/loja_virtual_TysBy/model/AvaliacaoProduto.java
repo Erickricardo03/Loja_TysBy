@@ -26,6 +26,7 @@ public class AvaliacaoProduto implements Serializable {
 
 	private String descricao;
 
+	
 	private Integer nota;
 
 	@ManyToOne(targetEntity = Pessoa.class)
